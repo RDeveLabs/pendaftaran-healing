@@ -246,7 +246,7 @@ async function renderDaftar() {
     document.getElementById("countTidak").textContent = "Tidak: " + tidakCount;
     const listPeserta = [...response.ikut, ...response.tidakIkut];
 
-    if (listPeserta === 0) {
+    if (!listPeserta.length) {
       list.innerHTML =
         '<div class="empty-state"><div class="big">📋</div>Belum ada yang mengisi form.<br>Jadilah yang pertama!</div>';
       return;
