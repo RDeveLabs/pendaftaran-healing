@@ -166,7 +166,7 @@ async function submitForm() {
   console.log(form);
 
   try {
-    const data = await fetch("https://api.rdevelabs.biz.id/post", {
+    const data = await fetch("https://villa.rdevelabs.biz.id/post", {
       method: "POST",
       headers: {
         "x-rdl": "ramdeveloper",
@@ -231,7 +231,7 @@ function resetForm() {
 async function renderDaftar() {
   try {
     const list = document.getElementById("daftarList");
-    const data = await fetch("https://api.rdevelabs.biz.id/data", {
+    const data = await fetch("https://villa.rdevelabs.biz.id/data", {
       method: 'GET',
       headers: {
         "x-rdl": "ramdeveloper",
