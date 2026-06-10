@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absensi Jalan-Jalan ke Villa Bogor</title>
+<link rel="stylesheet" href="./src/style.css">
+<script src="main.js"></script>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Pendaftaran Dibuka
+  </div>
+  <h1>Jalan-Jalan ke<br><span>Villa Bogor</span> 🌿</h1>
+  <p class="hero-sub">Isi form di bawah untuk konfirmasi kehadiranmu. Jangan sampai ketinggalan keseruannya!</p>
+</div>
+
+<!-- INFO CARDS -->
+<div class="info-row">
+  <div class="info-card">
+    <div class="info-icon green">📍</div>
+    <div>
+      <div class="info-label">Lokasi</div>
+      <div class="info-val">Villa Bogor</div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon yellow">📅</div>
+    <div>
+      <div class="info-label">Tanggal</div>
+      <div class="info-val">nyusul sekitar 20-25 Juni 2026</div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon green">🛵</div>
+    <div>
+      <div class="info-label">Transportasi</div>
+      <div class="info-val">motor masing-masing jir</div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon yellow">💵</div>
+    <div>
+      <div class="info-label">Biaya</div>
+      <div class="info-val">100Rb-200Rb</div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-wrap">
+  <div class="form-card">
+    <div id="formContent">
+      <div class="form-title">
+        <span class="leaf">🍃</span>
+        Form Kehadiran
+      </div>
+
+      <!-- Toggle Ikut / Tidak -->
+      <div class="status-toggle">
+        <button class="status-btn active-ikut" id="btnIkut" onclick="setStatus('ikut')">✅ Saya Ikut!</button>
+        <button class="status-btn" id="btnTidak" onclick="setStatus('tidak')">❌ Tidak Bisa</button>
+      </div>
+
+      <div class="field">
+        <label for="nama">Nama Lengkap (jgn pake nama panggilan) <span>*</span></label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkapmu">
+      </div>
+
+      <div class="field">
+        <label for="nim">NIM <span>*</span></label>
+        <input type="number" id="nim" placeholder="Contoh: 2310512001">
+      </div>
+
+      <!-- Alasan (muncul jika tidak ikut) -->
+      <div class="alasan-box" id="alasanBox">
+        <div class="field">
+          <label for="alasan">Alasan Tidak Bisa Ikut <span>*</span></label>
+          <textarea id="alasan" placeholder="Tuliskan alasanmu di sini..."></textarea>
+        </div>
+      </div>
+
+      <button class="submit-btn" id="submitBtn" onclick="submitForm()">🌿 Konfirmasi Kehadiran</button>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-icon ikut" id="successIcon">🎉</div>
+      <h2 id="successTitle">Yeay, kamu terdaftar!</h2>
+      <p id="successMsg">Terima kasih <span class="name-highlight" id="successName"></span>!<br>Sampai jumpa di Villa Bogor! 🌳</p>
+      <button class="reset-btn" onclick="resetForm()">Isi Form Lagi</button>
+    </div>
+  </div>
+</div>
+
+<!-- DAFTAR PESERTA -->
+<div class="daftar-section">
+  <div class="daftar-header">
+    <h2>🧑‍🤝‍🧑 Daftar Peserta</h2>
+    <div class="counter-pill">
+      <span class="pill ikut" id="countIkut">Ikut: 0</span>
+      <span class="pill tidak" id="countTidak">Tidak: 0</span>
+    </div>
+  </div>
+  <span class="daftar-list" id="daftarList">
+    <div class="empty-state">
+      <div class="big">📋</div>
+      Belum ada yang mengisi form.<br>Jadilah yang pertama!
+    </div>
+  </span>
+</div>
+
+
+</body>
+</html>
