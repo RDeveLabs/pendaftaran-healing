@@ -157,6 +157,11 @@ body::after {
   transition: transform 0.2s, box-shadow 0.2s;
   width: max-content;
 }
+.info-card a {
+  text-decoration: none;
+  display: flex;
+  gap: 12px;
+}
 .info-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px #1D9E7518;
