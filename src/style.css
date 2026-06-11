@@ -145,6 +145,9 @@ body::after {
   position: relative; z-index: 1;
   animation: fadeUp 0.7s 0.4s both;
 }
+.info-row a{
+  text-decoration: none;
+}
 .info-card {
   background: white;
   border: 1px solid #E8E6DF;
